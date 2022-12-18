@@ -1,7 +1,6 @@
 <?php
-use App\Http\Controllers\Usercontroller; 
-use App\Http\Controllers\VerseUsercontroller; 
-use App\Http\Controllers\Authcontroller; 
+use App\Http\Controllers\VerseUserController; 
+use App\Http\Controllers\AuthController; 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,8 +18,10 @@ use Illuminate\Support\Facades\Route;
 //Route::post("/user/connexion", [Usercontroller::class, "connexion"]);
 
 //Public routes 
+// user partie 
 Route::post('/register',[AuthController::class,"register"]);
 Route::post('/login',[AuthController::class,"login"]);
+//verses partie 
 Route::get('/verses',[VerseUserController::class,"index"]);
 Route::get('/verses/search/{year}',[VerseUserController::class,"search"]); 
 Route::get('/verses/{id}',[VerseUserController::class,"show"]);

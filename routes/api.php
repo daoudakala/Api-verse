@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 // user partie 
 Route::post('/register',[AuthController::class,"register"]);
 Route::post('/login',[AuthController::class,"login"]);
+Route::get('/users',[AuthController::class,"index"]);
 //verses partie 
 Route::get('/verses',[VerseUserController::class,"index"]);
 Route::get('/verses/search/{year}',[VerseUserController::class,"search"]); 
